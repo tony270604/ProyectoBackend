@@ -5,11 +5,11 @@ const config = require('./config');
 const comida = require('./modules/comida/comida');
 const gestor = require('./modules/gestor/gestor');
 const boleta = require('./modules/boleta/boleta');
-const port=process.env.PORT || 3000
+const port=process.env.PORT || 5001
 
 
-mysql://root:cBDGoRqJOGdNslOnOyroUUmJxCiIYyiD@junction.proxy.rlwy.net:30627/railwayñ
-
+mysql://root:cBDGoRqJOGdNslOnOyroUUmJxCiIYyiD@junction.proxy.rlwy.net:30627/railway
+const app = express();
 
 // Configura CORS 
 app.use(cors({
