@@ -9,7 +9,7 @@ const port=process.env.PORT || 5001
 
 
 mysql://root:cBDGoRqJOGdNslOnOyroUUmJxCiIYyiD@junction.proxy.rlwy.net:30627/railway
-const app = express();
+let app = express();
 
 // Configura CORS 
 app.use(cors({
