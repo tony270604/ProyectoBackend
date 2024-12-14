@@ -1,10 +1,10 @@
-import express from 'express';
-import controlador from './cont-boleta';
-import respuesta from '../../respuestas/respuestas';
-import { generarReportePDF } from '../../db/boletaDAO';
+const express = require("express");
+const controlador = require("./cont-boleta");
+const respuesta = require("../../respuestas/respuestas");
+const { generarReportePDF } = require('../../db/boletaDAO');
 const router = express.Router();
 
-router.post("/registrarPedido", async (req, res) => {
+router.post("/registrarPedido", async function (req, res) {
   const {
     dni_cli,
     nom_cli,
@@ -39,7 +39,7 @@ router.post("/registrarPedido", async (req, res) => {
   }
 });
 
-router.put("/inhabilitarBoleta/:numBol", async (req, res) => {
+router.put("/inhabilitarBoleta/:numBol", async function (req, res) {
   const { numBol } = req.params;
 
   try {
@@ -51,10 +51,10 @@ router.put("/inhabilitarBoleta/:numBol", async (req, res) => {
   }
 });
 
-router.get("/listarBoletas", async (req, res) => {
+router.get("/listarBoletas", async function (req, res) {
   try {
     const boletas = await controlador.listarBoletas();
-
+    
     // Validar que boletas sea un array
     if (!Array.isArray(boletas)) {
       return res.status(500).json({ success: false, message: "El resultado no es un array" });
@@ -69,4 +69,5 @@ router.get("/listarBoletas", async (req, res) => {
 
 router.get("/generarReportePDF", generarReportePDF);
 
-export default router;
+
+module.exports = router;

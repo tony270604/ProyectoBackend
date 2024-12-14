@@ -1,7 +1,7 @@
 /** @format */
 
 //Importar la funcion conexcion
-import { getConexion } from './conexion.js';
+const { getConexion } = require("./conexion");
 
 // const listarComida = (nom_com) => {
 //   return new Promise((resolve, reject) => {

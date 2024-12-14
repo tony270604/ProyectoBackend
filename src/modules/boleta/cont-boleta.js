@@ -1,5 +1,4 @@
-// Importación de módulos
-import * as DB from '../../db/boletaDAO.js';
+const DB = require("../../db/boletaDAO");
 
 function registrarPedido(pedido, detalles) {
   return DB.registrarPedido(pedido, detalles);
@@ -8,7 +7,6 @@ function registrarPedido(pedido, detalles) {
 function inhabilitarBoleta(num_bol) {
   return DB.inhabilitarBoleta(num_bol);
 }
-
 function listarBoletas() {
   return DB.listarBoletas()
       .then(results => {
@@ -23,16 +21,14 @@ function listarBoletas() {
           throw new Error("Error al listar las boletas");
       });
 }
-
-function enviarBoleta(correo_cli, numBol) {
-    return DB.enviarBoleta(correo_cli, numBol);
+  
+function enviarBoleta(correo_cli, numBol){
+    return DB.enviarBoleta(correo_cli, numBol)
 }
-
-function generarReportePDF() {
+function generarReportePDF(){
     return DB.generarReportePDF();
 }
-
-export {
+module.exports = {
   registrarPedido,
   inhabilitarBoleta,
   listarBoletas,
