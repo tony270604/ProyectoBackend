@@ -8,8 +8,8 @@ const boleta = require('./modules/boleta/boleta');
 const port=process.env.PORT || 3000
 
 
-mysql://root:cBDGoRqJOGdNslOnOyroUUmJxCiIYyiD@junction.proxy.rlwy.net:30627/railway
-const app = express();
+mysql://root:cBDGoRqJOGdNslOnOyroUUmJxCiIYyiD@junction.proxy.rlwy.net:30627/railwayñ
+
 
 // Configura CORS 
 app.use(cors({
