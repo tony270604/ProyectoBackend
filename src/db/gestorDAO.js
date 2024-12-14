@@ -1,8 +1,8 @@
 /** @format */
 
-const { getConexion } = require("./conexion");
-const bcrypt = require('bcryptjs');
-const nodemailer = require("nodemailer");
+import { getConexion } from './conexion.js';
+import bcrypt from 'bcryptjs';
+import nodemailer from 'nodemailer';
 
 async function validateLogin(email, password) {
   return new Promise((resolve, reject) => {

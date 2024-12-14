@@ -1,11 +1,11 @@
 /** @format */
 
-const express = require("express");
-const controlador = require("./cont-comida");
-const respuesta = require("../../respuestas/respuestas");
+import express from 'express';
+import * as controlador from './cont-comida.js';
+import * as respuesta from '../../respuestas/respuestas.js';
+import multer from 'multer';
+
 const router = express.Router();
-//Para las imagenes
-const multer = require("multer");
 const upload = multer();
 
 // router.get("/listarcomida", async function (req, res) {
@@ -80,4 +80,4 @@ router.post("/deleteFood", async function (req, res) {
   }
 });
 
-module.exports = router;
+export default router;

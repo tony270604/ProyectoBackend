@@ -1,6 +1,6 @@
 /** @format */
 
-const DB = require("../../db/comidaDAO");
+import * as DB from '../../db/comidaDAO';  // Importación por nombramiento
 
 // function listarComida(nom_com) {
 //   return DB.listarComida(nom_com);
@@ -20,7 +20,8 @@ function editFood(cod_com, name, price, des, imgBuffer) {
 function deleteFood(cod_com) {
   return DB.deleteFood(cod_com);
 }
-module.exports = {
+
+export {
   listarComida,
   addFood,
   editFood,

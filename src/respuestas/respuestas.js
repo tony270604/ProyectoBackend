@@ -1,17 +1,15 @@
-//Mensaje de todo okey
-exports.success=function(req,res,mensaje="",status=200){
+export function success(req, res, mensaje = "", status = 200) {
     res.status(status).send({
-        error:false,
-        status:status,
-        body:mensaje
-    })
-};
+        error: false,
+        status: status,
+        body: mensaje
+    });
+}
 
-//Mensaje de error
-exports.error=function(req,res,mensaje="Error interno",status=500){
+export function error(req, res, mensaje = "Error interno", status = 500) {
     res.status(status).send({
-        error:true,
-        status:status,
-        body:mensaje,
-    })
-};
+        error: true,
+        status: status,
+        body: mensaje
+    });
+}

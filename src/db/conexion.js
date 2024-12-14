@@ -1,5 +1,5 @@
-const mysql = require('mysql2');
-const config = require('../config');
+import mysql from 'mysql2';
+import * as config from '../config.js'; 
 
 const DBconfig = {
     host: config.mysql.host,

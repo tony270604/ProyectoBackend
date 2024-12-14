@@ -1,8 +1,7 @@
-//Importar la funcion conexcion
-const { getConexion } = require("./conexion");
-const nodemailer = require("nodemailer");
-const fs = require("fs");
-const PDFDocument = require("pdfkit");
+import { getConexion } from './conexion.js';
+import nodemailer from 'nodemailer';
+import fs from 'fs';
+import PDFDocument from 'pdfkit';
 
 //listar boletas
 const listarBoletas = (estado) => {
