@@ -7,7 +7,7 @@ const gestor = require('./modules/gestor/gestor');
 const boleta = require('./modules/boleta/boleta');
 
 
-
+mysql://root:cBDGoRqJOGdNslOnOyroUUmJxCiIYyiD@junction.proxy.rlwy.net:30627/railway
 const app = express();
 
 // Configura CORS 
