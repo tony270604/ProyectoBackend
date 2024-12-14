@@ -14,7 +14,9 @@ app = express();
 // Configura CORS 
 app.use(cors({
     origin: 'https://proyectoprofe.netlify.app/', 
-    credentials: true 
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 //Para que maneje objetos 
 app.use(morgan('dev'));
