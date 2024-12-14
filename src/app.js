@@ -13,7 +13,7 @@ app = express();
 
 // Configura CORS 
 app.use(cors({
-    origin: 'https://proyecto-frontend-navy.vercel.app/', 
+    origin: 'https://proyectoprofe.netlify.app/', 
     credentials: true 
 }));
 //Para que maneje objetos 
