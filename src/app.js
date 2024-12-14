@@ -13,7 +13,7 @@ app = express();
 
 // Configura CORS 
 app.use(cors({
-    origin: 'http://localhost:4200', 
+    origin: 'https://proyecto-frontend-navy.vercel.app/', 
     credentials: true 
 }));
 //Para que maneje objetos 
