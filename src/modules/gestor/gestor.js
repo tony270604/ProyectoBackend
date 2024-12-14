@@ -1,7 +1,8 @@
 /** @format */
 
 import express from 'express';
-import { success, error } from '../../respuestas/respuestas';
+import * as respuestas from '../../respuestas/respuestas';
+
 import * as controlador from './cont-gestor';
 
 const router = express.Router();
